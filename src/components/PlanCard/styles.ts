@@ -1,20 +1,29 @@
 import styled from "styled-components";
 
 export const PlanCardContainer = styled.section`
-  height: 60vh;
+  height: 27rem;
   width: 19rem;
   margin-top: -7.5rem;
   color: ${({ theme }) => theme.colors["base-text"]};
   background: ${({ theme }) => theme.colors["neutral-secondary"]};
   border-radius: 8px;
   box-shadow: 0px 1px 4px rgba(142, 150, 185, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  button {
+    margin: 1.5rem;
+    width: calc(100% - 3rem);
+  }
 `;
 
 export const PlanCardContent = styled.div`
   padding: 1.25rem;
+  height: 100%;
 `;
 
-export const CardHeader = styled.div`
+export const CardHeaderHighlighted = styled.div`
   background: ${({ theme }) => theme.colors["base-secondary"]};
   padding: 1.5rem;
   border-top-right-radius: 8px;
@@ -36,6 +45,22 @@ export const CardHeader = styled.div`
     background-color: ${({ theme }) => theme.colors["base-primary"]};
     padding: 0.5rem 1.5rem;
     border-radius: 40px;
+  }
+`;
+
+export const CardHeaderRegular = styled.div`
+  background: ${({ theme }) => theme.colors["neutral-secondary"]};
+  padding: 1.5rem;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    color: ${({ theme }) => theme.colors["neutral-primary"]};
+    font-weight: 600;
+    font-size: 1.25rem;
   }
 `;
 

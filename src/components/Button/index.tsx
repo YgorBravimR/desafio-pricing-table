@@ -1,8 +1,12 @@
 import { ButtonContainer } from './styles'
 
-export function Button() {
+interface ButtonProps {
+  variant: "fill" | "outline"
+}
+
+export function Button({ variant }: any) {
   return (
-    <ButtonContainer>
+    <ButtonContainer variant={variant}>
       Assinar
     </ButtonContainer>
   )
